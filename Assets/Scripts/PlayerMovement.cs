@@ -20,22 +20,26 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
+        Rotate();
     }
 
     void Move()
     {
         if(rightPressed)
-            player.Translate(Vector2.right * speed * Time.deltaTime);
+            player.Translate(Vector2.right * speed * Time.deltaTime, Space.World );
         if (leftPressed)
-            player.Translate(Vector2.left * speed * Time.deltaTime);
+            player.Translate(Vector2.left * speed * Time.deltaTime, Space.World );
         if (upPressed)
-            player.Translate(Vector2.up * speed * Time.deltaTime);
+            player.Translate(Vector2.up * speed * Time.deltaTime,Space.World );
         if (downPressed)
-            player.Translate(Vector2.down * speed * Time.deltaTime);
+            player.Translate(Vector2.down * speed * Time.deltaTime, Space.World );
     }
 
     void Rotate()
     {
-
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 dir = worldPosition - player.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        player.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
     }
 }
