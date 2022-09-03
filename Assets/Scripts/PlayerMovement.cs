@@ -33,4 +33,9 @@ public class PlayerMovement : MonoBehaviour
         if (downPressed)
             player.Translate(Vector2.down * speed * Time.deltaTime);
     }
+
+    void Rotate()
+    {
+
+    }
 }
