@@ -9,14 +9,23 @@ public class EnemyNavMeshMovement : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
+    //gecici kod
+    Transform player;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+        //gecici kod
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     private void Update()
     {
+        //gecici kod
+        target.position = player.position;
+
         agent.SetDestination(target.position);
         Aim();
     }
