@@ -43,7 +43,7 @@ public class EnemyNavMeshMovement : MonoBehaviour
         transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
     public void SetTarget(Vector2 position) { target.position = position; }
-    public Vector2 GetTarget() { return target.position; }
+    public Vector3 GetTarget() { return target.position; }
 
     public void SetCanMove(bool value)
     {
