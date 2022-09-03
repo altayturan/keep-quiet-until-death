@@ -5,23 +5,36 @@ using UnityEngine;
 public class EnemyPatrol : MonoBehaviour
 {
     EnemyNavMeshMovement m_NavMeshMovement;
-    Vector2 oldPos;
+    Vector2 center;
+    Vector2 randpos;
+    Vector2 target;
     private void Start()
     {
         m_NavMeshMovement = GetComponent<EnemyNavMeshMovement>();
+        target = RandomPosGetter(transform.position);
     }
-    void Update()
+    void FixedUpdate()
     {
-        if(this.transform.position == m_NavMeshMovement.GetTarget())
+        if (m_NavMeshMovement.canMove)
         {
-            oldPos = m_NavMeshMovement.GetTarget();
-            GoToPos(new Vector2(transform.position.x + Random.Range(0, 5), transform.position.y + Random.Range(0, 5)));
+            CancelInvoke("Patrol");
             return;
         }
-        GoToPos(oldPos);
+        if (!IsInvoking("Patrol"))
+        {
+            InvokeRepeating("Patrol", 0, 3);
+        }
     }
-    void GoToPos(Vector2 value)
+
+    void Patrol()
     {
-        transform.Translate(value);
+        Debug.Log("SLM");
+        target = (target == center ? RandomPosGetter(transform.position) : center);
+        m_NavMeshMovement.SetTarget(target);
+    }
+    Vector2 RandomPosGetter(Vector2 value)
+    {
+        Vector2 pos = new Vector2(value.x + Random.Range(-2,2),value.y + Random.Range(-2,2));
+        return pos;
     }
 }

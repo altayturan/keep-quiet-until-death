@@ -8,8 +8,8 @@ public class EnemyNavMeshMovement : MonoBehaviour
     [SerializeField]
     Transform target;
     NavMeshAgent agent;
-
-    private bool canMove = false;
+    [SerializeField]
+    public bool canMove = false;
     //gecici kod
     Transform player;
 
@@ -25,7 +25,7 @@ public class EnemyNavMeshMovement : MonoBehaviour
     private void Update()
     {
         //gecici kod
-        
+        SetCanMove();   
         agent.SetDestination(target.position);
         
         Aim();
@@ -45,9 +45,14 @@ public class EnemyNavMeshMovement : MonoBehaviour
     public void SetTarget(Vector2 position) { target.position = position; }
     public Vector3 GetTarget() { return target.position; }
 
-    public void SetCanMove(bool value)
+    public void SetCanMove()
     {
-        canMove = value;
+        if(GetTarget() != player.position)
+        {
+            canMove = false;
+            return;
+        }
+        canMove = true;    
     }
 
     public void SetTargetPos(Vector2 value)
