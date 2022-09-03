@@ -9,8 +9,7 @@ public class EnemyNavMeshMovement : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
-    private bool canMove { get;  set; }
-
+    private bool canMove = false;
     //gecici kod
     Transform player;
 
@@ -26,8 +25,6 @@ public class EnemyNavMeshMovement : MonoBehaviour
     private void Update()
     {
         //gecici kod
-        if(canMove)
-            target.position = player.position;
         
         agent.SetDestination(target.position);
         
@@ -48,4 +45,13 @@ public class EnemyNavMeshMovement : MonoBehaviour
     public void SetTarget(Vector2 position) { target.position = position; }
     public Vector2 GetTarget() { return target.position; }
 
+    public void SetCanMove(bool value)
+    {
+        canMove = value;
+    }
+
+    public void SetTargetPos(Vector2 value)
+    {
+        target.position = value;
+    }
 }
