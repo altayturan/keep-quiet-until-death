@@ -5,7 +5,9 @@ public class PlayerNoise : MonoBehaviour
     private float range;
 
     [SerializeField, Header("0 is default, 1 is sneak, 2 is run, 3 is fire")]
-    private float[] allRanges; 
+    private float[] allRanges;
+    [SerializeField]
+    private LayerMask enemyLayer;
 
     private void OnDrawGizmos()
     {
@@ -20,6 +22,10 @@ public class PlayerNoise : MonoBehaviour
     }
     public void SetEnemyNoise()
     {
-        Physics2D.CircleCastAll(this.transform.position);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(this.transform.position, range, Vector2.zero, 1000, enemyLayer);
+        foreach (var rycst in hits)
+        {
+            rycst.collider.gameObject
+        }
     }
 }
