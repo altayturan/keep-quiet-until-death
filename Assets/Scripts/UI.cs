@@ -17,5 +17,5 @@ public class UI : MonoBehaviour
     }
 
     public void SetInteractButton(bool value) { interactButton.SetActive(value); }
-    public void InstantiateUIObject(GameObject gameObject) { Instantiate(gameObject, this.transform); }
+    public void InstantiateUIObject(GameObject gameObject) { Instantiate(gameObject, this.gameObject.transform); }
 }
