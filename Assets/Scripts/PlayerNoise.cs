@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class PlayerNoise : MonoBehaviour
 {
-    private float range;
+    private float range = 5;
 
     [SerializeField, Header("0 is default, 1 is sneak, 2 is run, 3 is fire")]
     private float[] allRanges;
     [SerializeField]
     private LayerMask enemyLayer;
-
+    private void Update()
+    {
+        SetEnemyNoise();
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
