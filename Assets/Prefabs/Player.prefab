@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 6773736607450900279}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2694642922616194825
 Rigidbody2D:
@@ -52,7 +52,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rangePercent: 0
   range: 5
-  percentIncrease: 1
+  percentIncrease: 20
   shooting: 0
 --- !u!114 &6773736606778152914
 MonoBehaviour:
@@ -208,7 +208,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: 9eca1cc1e840d5043aeba1f21a4361a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
