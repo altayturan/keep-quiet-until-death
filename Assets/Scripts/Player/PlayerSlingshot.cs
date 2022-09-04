@@ -13,7 +13,6 @@ public class PlayerSlingshot : MonoBehaviour
 
     PlayerMovement playerMovement;
     GameObject hitPointer;
-    Vector3 holderPosition;
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -43,19 +42,10 @@ public class PlayerSlingshot : MonoBehaviour
     public void Shoot()
     {
         GameObject bullet = Instantiate(stone, playerMovement.GetPlayerShootPos().position, Quaternion.identity);
-        bullet.GetComponent<Rigidbody2D>().velocity = (this.transform.up).normalized * speed;
-
-        float totalRange = range * rangePercent / 100;
-        float instantiatedSpeed = bullet.GetComponent<Rigidbody2D>().velocity.magnitude;
-        Debug.Log("range = " + totalRange + "   /    speed = " + instantiatedSpeed);
-        Invoke("Particle", totalRange / instantiatedSpeed);
-        Destroy(bullet, totalRange / instantiatedSpeed);
-        holderPosition = hitPointer.transform.position;
-
+        bullet.GetComponent<Slingshot>().SetVariables(speed, range * rangePercent / 100, hitEffect, this.gameObject);
         rangePercent = 0;
         UI.ui.SetSlider(UI.ui.slingSlider, 100, (int)rangePercent);
         Destroy(hitPointer);
         SetShooting(false);
     }
-    public void Particle() { Destroy(Instantiate(hitEffect, holderPosition, Quaternion.identity), 2f); }
 }
