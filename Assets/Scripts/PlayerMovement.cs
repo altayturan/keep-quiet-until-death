@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float[] allSpeeds;
     private int activeSpeed = 0;
     private Transform player;
+    [SerializeField] private Transform playerShootPos;
 
     private bool rightPressed => Input.GetKey(KeyCode.D);
     private bool leftPressed => Input.GetKey(KeyCode.A);
@@ -57,4 +58,5 @@ public class PlayerMovement : MonoBehaviour
         player.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
     }
     public void SetActiveSpeed(int value) { activeSpeed = value; GetComponent<PlayerNoise>().SetRange(value); }
+    public Transform GetPlayerShootPos() { return playerShootPos; }
 }

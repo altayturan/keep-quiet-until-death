@@ -8,14 +8,13 @@ public class UI : MonoBehaviour
     public static UI ui;
 
 
-    [SerializeField]
-    GameObject interactButton;
+    public GameObject
+    interactButton,
+    slingSlider;
 
-    private void Start()
-    {
-        if (ui == null) ui = this;
-    }
+    private void Start() { if (ui == null) ui = this; }
 
-    public void SetInteractButton(bool value) { interactButton.SetActive(value); }
+    public void SetActive(GameObject gameObject, bool value) { gameObject.SetActive(value); }
+    public void SetSlider(GameObject gameObject, int maxValue, int currValue) { gameObject.SetActive(currValue != 0);  gameObject.GetComponent<Slider>().maxValue = maxValue; gameObject.GetComponent<Slider>().value = currValue; } 
     public void InstantiateUIObject(GameObject gameObject) { Instantiate(gameObject, this.gameObject.transform); }
 }

@@ -8,7 +8,7 @@ public class CollectableNotes : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-            UI.ui.SetInteractButton(true);
+            UI.ui.SetActive(UI.ui.interactButton, true);
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -16,13 +16,13 @@ public class CollectableNotes : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 UI.ui.InstantiateUIObject(note);
-                UI.ui.SetInteractButton(false);
+                UI.ui.SetActive(UI.ui.interactButton, false);
                 Destroy(gameObject);
             }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
-            UI.ui.SetInteractButton(false);
+            UI.ui.SetActive(UI.ui.interactButton, false);
     }
 }
