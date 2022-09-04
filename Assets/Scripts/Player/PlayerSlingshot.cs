@@ -5,19 +5,20 @@ using UnityEngine;
 public class PlayerSlingshot : MonoBehaviour
 {
     [SerializeField]
-    float range = 5f, percentIncrease = 1f, stoneSpeed = 1f;
+    float range = 5f, percentIncrease = 1f, speed = 1f;
     float rangePercent;
     bool shooting;
     [SerializeField]
-    GameObject stone, hitPoint;
+    GameObject stone, hitPoint, hitEffect;
 
     PlayerMovement playerMovement;
     GameObject hitPointer;
+    Vector3 holderPosition;
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(1) && !GetShooting())
             StartShooting();
@@ -31,20 +32,30 @@ public class PlayerSlingshot : MonoBehaviour
     public bool GetShooting() { return shooting; }
     public void HoldShooting()
     {
+        //math
         rangePercent += percentIncrease * Time.deltaTime;
         rangePercent = Mathf.Clamp(rangePercent, 0, 100);
         playerMovement.SetActiveSpeed(1);
+
         UI.ui.SetSlider(UI.ui.slingSlider, 100, (int)rangePercent);
-        hitPointer.transform.position = playerMovement.GetPlayerShootPos().position + this.transform.up * (range * rangePercent / 100) * 9;
+        hitPointer.transform.position = playerMovement.GetPlayerShootPos().position + this.transform.up * (range * rangePercent / 100);
     }
     public void Shoot()
     {
-        SetShooting(false);
         GameObject bullet = Instantiate(stone, playerMovement.GetPlayerShootPos().position, Quaternion.identity);
-        bullet.GetComponent<Rigidbody2D>().AddForce(this.transform.up * stoneSpeed, ForceMode2D.Impulse);
-        Destroy(bullet, range * rangePercent / 100);
+        bullet.GetComponent<Rigidbody2D>().velocity = (this.transform.up).normalized * speed;
+
+        float totalRange = range * rangePercent / 100;
+        float instantiatedSpeed = bullet.GetComponent<Rigidbody2D>().velocity.magnitude;
+        Debug.Log("range = " + totalRange + "   /    speed = " + instantiatedSpeed);
+        Invoke("Particle", totalRange / instantiatedSpeed);
+        Destroy(bullet, totalRange / instantiatedSpeed);
+        holderPosition = hitPointer.transform.position;
+
         rangePercent = 0;
         UI.ui.SetSlider(UI.ui.slingSlider, 100, (int)rangePercent);
         Destroy(hitPointer);
+        SetShooting(false);
     }
+    public void Particle() { Destroy(Instantiate(hitEffect, holderPosition, Quaternion.identity), 2f); }
 }

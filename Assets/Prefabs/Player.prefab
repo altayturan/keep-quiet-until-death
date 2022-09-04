@@ -128,11 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83b2622ceb780a4c9a545bb3257711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1
+  range: 5
   percentIncrease: 50
-  stoneSpeed: 10
+  speed: 15
   stone: {fileID: 6299025918728034202, guid: 4902551902df8624c81a80c82e272f51, type: 3}
   hitPoint: {fileID: 2380491698484808914, guid: f470c2e637d42db4296ac3434c60c54a, type: 3}
+  hitEffect: {fileID: 2835505766642106059, guid: 55fe8884b0e29ec4aaf277fabc5c46a0, type: 3}
 --- !u!114 &6773736606778152914
 MonoBehaviour:
   m_ObjectHideFlags: 0

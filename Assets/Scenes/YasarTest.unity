@@ -297,6 +297,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8815830326967401513, guid: 60327ce2413683749933ed699c6b4602, type: 3}
+      propertyPath: stoneSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 60327ce2413683749933ed699c6b4602, type: 3}
