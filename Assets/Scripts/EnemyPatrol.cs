@@ -6,7 +6,6 @@ public class EnemyPatrol : MonoBehaviour
 {
     EnemyNavMeshMovement m_NavMeshMovement;
     Vector2 center;
-    Vector2 randpos;
     Vector2 target;
     private void Start()
     {
