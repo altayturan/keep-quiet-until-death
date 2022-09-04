@@ -13,8 +13,8 @@ public class PlayerNoise : MonoBehaviour
     private bool canDecrease = true;
     private void Update()
     {
-        SetEnemyNoise();
         DynamicRange();
+        SetEnemyNoise();
     }
     void DynamicRange()
     {

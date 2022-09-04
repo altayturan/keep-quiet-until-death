@@ -21,9 +21,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        MovementSpeed();
         Move();
         Rotate();
+        //if satýrý kaldýrýlýrsa sapan çekerken sneak olmasýna raðmen default ses çýkarýr
+        if(!GetComponent<PlayerSlingshot>().GetShooting())
+            MovementSpeed();
     }
     void MovementSpeed()
     {

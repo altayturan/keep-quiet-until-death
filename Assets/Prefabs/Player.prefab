@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6773736606778152916}
-  - component: {fileID: 6773736606778152914}
-  - component: {fileID: 6773736606778152917}
   - component: {fileID: 2694642922616194825}
   - component: {fileID: 6046294421008369930}
+  - component: {fileID: 8815830326967401513}
+  - component: {fileID: 6773736606778152914}
+  - component: {fileID: 6773736606778152917}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -34,44 +35,8 @@ Transform:
   m_Children:
   - {fileID: 6773736607450900279}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6773736606778152914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6773736606778152912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b596d85d7b42c9143a7e97044d2212e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allSpeeds:
-  - 5
-  - 1
-  - 7
---- !u!114 &6773736606778152917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6773736606778152912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1631c4c90fe498b41ab8850dc79246df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allRanges:
-  - 5
-  - 2
-  - 10
-  - 15
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!50 &2694642922616194825
 Rigidbody2D:
   serializedVersion: 4
@@ -119,6 +84,58 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8815830326967401513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773736606778152912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83b2622ceb780a4c9a545bb3257711b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangePercent: 0
+  range: 5
+  percentIncrease: 1
+  shooting: 0
+--- !u!114 &6773736606778152914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773736606778152912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b596d85d7b42c9143a7e97044d2212e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allSpeeds:
+  - 5
+  - 1
+  - 7
+--- !u!114 &6773736606778152917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773736606778152912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1631c4c90fe498b41ab8850dc79246df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allRanges:
+  - 5
+  - 2
+  - 10
+  - 15
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6773736607450900278
 GameObject:
   m_ObjectHideFlags: 0
