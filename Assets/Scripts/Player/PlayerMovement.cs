@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Transform player;
     [SerializeField] private Transform playerShootPos;
 
+    Animator animator;
     private bool rightPressed => Input.GetKey(KeyCode.D);
     private bool leftPressed => Input.GetKey(KeyCode.A);
     private bool upPressed => Input.GetKey(KeyCode.W);
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         player = GetComponent<Transform>();
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -41,14 +43,25 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        if(rightPressed)
-            player.Translate(Vector2.right * allSpeeds[activeSpeed] * Time.deltaTime, Space.World );
+        Vector2 vector = new Vector2(0, 0);
+
+        if (rightPressed)
+            vector += Vector2.right;
         if (leftPressed)
-            player.Translate(Vector2.left * allSpeeds[activeSpeed] * Time.deltaTime, Space.World );
+            vector += Vector2.left;
         if (upPressed)
-            player.Translate(Vector2.up * allSpeeds[activeSpeed] * Time.deltaTime,Space.World );
+            vector += Vector2.up;
         if (downPressed)
-            player.Translate(Vector2.down * allSpeeds[activeSpeed] * Time.deltaTime, Space.World );
+            vector += Vector2.down;
+
+        if(vector.magnitude != 0)
+        {
+            player.Translate(vector * allSpeeds[activeSpeed] * Time.deltaTime, Space.World);
+            animator.SetBool("isWalking", true);
+        }
+        else
+            animator.SetBool("isWalking", false);
+
     }
     void Rotate()
     {

@@ -21,4 +21,9 @@ public class Slingshot : MonoBehaviour
         this.hitEffect = hitEffect;
         this.player = player;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Particle();
+        Destroy(gameObject);
+    }
 }
