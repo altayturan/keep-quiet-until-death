@@ -301,38 +301,6 @@ PrefabInstance:
       propertyPath: stoneSpeed
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 8815830326967401513, guid: 60327ce2413683749933ed699c6b4602, type: 3}
-      propertyPath: gradient.key0.a
-      value: 0.5882353
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815830326967401513, guid: 60327ce2413683749933ed699c6b4602, type: 3}
-      propertyPath: gradient.key0.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815830326967401513, guid: 60327ce2413683749933ed699c6b4602, type: 3}
-      propertyPath: gradient.key0.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815830326967401513, guid: 60327ce2413683749933ed699c6b4602, type: 3}
-      propertyPath: gradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815830326967401513, guid: 60327ce2413683749933ed699c6b4602, type: 3}
-      propertyPath: gradient.key1.a
-      value: 0.5882353
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815830326967401513, guid: 60327ce2413683749933ed699c6b4602, type: 3}
-      propertyPath: gradient.key1.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815830326967401513, guid: 60327ce2413683749933ed699c6b4602, type: 3}
-      propertyPath: gradient.key1.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8815830326967401513, guid: 60327ce2413683749933ed699c6b4602, type: 3}
-      propertyPath: gradient.key1.r
-      value: 0.030668736
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 60327ce2413683749933ed699c6b4602, type: 3}
