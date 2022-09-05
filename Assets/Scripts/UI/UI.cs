@@ -10,7 +10,11 @@ public class UI : MonoBehaviour
 
     public GameObject
     interactButton,
-    slingSlider;
+    healthBar,
+    staminaBar,
+    scrapText,
+    bulletText;
+
 
     private void Start() { if (ui == null) ui = this; }
 
