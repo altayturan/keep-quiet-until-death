@@ -20,7 +20,7 @@ public class PlayerSlingshot : MonoBehaviour
     {
         playerMovement = GetComponent<PlayerMovement>();
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(1) && !GetShooting())
             StartShooting();

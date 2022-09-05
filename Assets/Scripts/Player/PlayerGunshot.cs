@@ -19,7 +19,7 @@ public class PlayerGunshot : MonoBehaviour
     {
         playerMovement = GetComponent<PlayerMovement>();
     }
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0) && canShoot && canTwice)
             Shoot();
