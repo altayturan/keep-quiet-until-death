@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (sneakPressed)
             SetActiveSpeed(1);
-        else if (runPressed)
+        else if (runPressed && GetComponent<PlayerStats>().LoseStamina(1))
             SetActiveSpeed(2);
         else if (rightPressed || leftPressed || downPressed || upPressed)
             SetActiveSpeed(0);
@@ -54,14 +54,12 @@ public class PlayerMovement : MonoBehaviour
         if (downPressed)
             vector += Vector2.down;
 
-        if(vector.magnitude != 0)
-        {
-            player.Translate(vector * allSpeeds[activeSpeed] * Time.deltaTime, Space.World);
+        player.Translate(vector * allSpeeds[activeSpeed] * Time.deltaTime, Space.World);
+
+        if (vector.magnitude != 0)
             animator.SetBool("isWalking", true);
-        }
         else
             animator.SetBool("isWalking", false);
-
     }
     void Rotate()
     {
@@ -71,5 +69,6 @@ public class PlayerMovement : MonoBehaviour
         player.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
     }
     public void SetActiveSpeed(int value) { activeSpeed = value; GetComponent<PlayerNoise>().SetRange(value); }
+    public int GetActiveSpeed() { return activeSpeed; }
     public Transform GetPlayerShootPos() { return playerShootPos; }
 }
