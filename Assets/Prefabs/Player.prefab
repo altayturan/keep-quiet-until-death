@@ -43,8 +43,10 @@ GameObject:
   - component: {fileID: 2694642922616194825}
   - component: {fileID: 6046294421008369930}
   - component: {fileID: 8815830326967401513}
+  - component: {fileID: 1687284380885474210}
   - component: {fileID: 6773736606778152914}
   - component: {fileID: 6773736606778152917}
+  - component: {fileID: 7446115954646526944}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -134,6 +136,22 @@ MonoBehaviour:
   stone: {fileID: 6299025918728034202, guid: 4902551902df8624c81a80c82e272f51, type: 3}
   hitPoint: {fileID: 2380491698484808914, guid: f470c2e637d42db4296ac3434c60c54a, type: 3}
   hitEffect: {fileID: 2835505766642106059, guid: 55fe8884b0e29ec4aaf277fabc5c46a0, type: 3}
+--- !u!114 &1687284380885474210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773736606778152912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f760647750362b4f97578ceaaae44bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  reloadTime: 1
+  bullet: {fileID: 6299025918728034202, guid: 1399797c8c90024448f981ada48b4f75, type: 3}
+  hitEffect: {fileID: 2611548064491747462, guid: a51a67240fe6e6f4ea01cf7de1913297, type: 3}
 --- !u!114 &6773736606778152914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +189,26 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!95 &7446115954646526944
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773736606778152912}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c6d716370a235fa43b294579f316ac6c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6773736607450900278
 GameObject:
   m_ObjectHideFlags: 0
