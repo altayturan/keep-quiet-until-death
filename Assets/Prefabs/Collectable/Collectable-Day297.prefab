@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6178184914961325230}
   - component: {fileID: 183725449}
   m_Layer: 0
-  m_Name: CollectableDay297
-  m_TagString: Collectable
+  m_Name: Collectable-Day297
+  m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 6178184915176455910}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6178184914961325217
 BoxCollider2D:

@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 6773736606778152914}
   - component: {fileID: 6773736606778152917}
   - component: {fileID: 4470099082535696444}
+  - component: {fileID: 7244447444819280675}
   - component: {fileID: 7446115954646526944}
   m_Layer: 0
   m_Name: Player
@@ -233,6 +234,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   maxStamina: 25
+--- !u!114 &7244447444819280675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773736606778152912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cffd0730e8957f64ba799ea641ab7a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  note: {fileID: 0}
 --- !u!95 &7446115954646526944
 Animator:
   serializedVersion: 4
