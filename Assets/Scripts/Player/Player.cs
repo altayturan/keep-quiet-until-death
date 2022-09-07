@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -19,6 +18,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Girdi");
         string tag = collision.collider.tag;
         if (tag == "Grass" || tag == "Garbage" || tag == "Lamp" || tag == "Tree")
             collision.collider.GetComponent<EtkilesimliObje>().PlaySound();

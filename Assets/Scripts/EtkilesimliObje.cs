@@ -13,11 +13,12 @@ public class EtkilesimliObje : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.clip = audioClip;
     }
 
     public void PlaySound()
     {
-        audioSource.PlayOneShot(audioSource.clip, .5f);
+        audioSource.PlayOneShot(audioSource.clip, 1f);
     }
     private void OnDrawGizmos()
     {

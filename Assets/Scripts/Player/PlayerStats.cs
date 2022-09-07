@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
+        if(playerMovement != null)
         if (playerMovement.GetActiveSpeed() != 2)
             GainStamina(1);
     }
