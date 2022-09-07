@@ -13,7 +13,7 @@ public class PlayerCollectable : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(collision.gameObject.name.Split('-')[0] == "Collectable")
+            if (collision.gameObject.name.Split('-')[0] == "Collectable")
             {
                 if (collision.gameObject.name.Split('-')[1] == "Note")
                     UI.ui.InstantiateUIObject(collision.gameObject.GetComponent<CollectableNotes>().GetNote());
@@ -26,6 +26,8 @@ public class PlayerCollectable : MonoBehaviour
                 UI.ui.SetActive(UI.ui.interactButton, false);
                 Destroy(collision.gameObject);
             }
+            if (collision.gameObject.name == "InSceneTeleporter")
+                gameObject.transform.position = collision.gameObject.GetComponent<TeleporterData>().GetTransform().position;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
