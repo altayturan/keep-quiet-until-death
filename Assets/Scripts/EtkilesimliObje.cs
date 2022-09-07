@@ -2,35 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+[RequireComponent(typeof(AudioSource))]
 public class EtkilesimliObje : MonoBehaviour
 {
-    [SerializeField] private ObjectMaker om;
+    
+    [SerializeField] private AudioClip audioClip;
+    [SerializeField] private float range;
 
-    private Sprite artwork;
     private AudioSource audioSource;
-    private float range;
     void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = om.sprite;
-        //audioSource = om.audioClip;
-        range = om.range;
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaySound()
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Ses oynatma kodu
+        audioSource.PlayOneShot(audioSource.clip, .5f);
     }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-    
+
 }

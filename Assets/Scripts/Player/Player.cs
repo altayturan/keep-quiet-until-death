@@ -14,6 +14,13 @@ public class Player : MonoBehaviour
     [ContextMenu("Load")]
     public void Load()
     {
-       Player player = DataSaver.Load(this);
+        Player player = DataSaver.Load(this);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        string tag = collision.collider.tag;
+        if (tag == "Grass" || tag == "Garbage" || tag == "Lamp" || tag == "Tree")
+            collision.collider.GetComponent<EtkilesimliObje>().PlaySound();
     }
 }
