@@ -14,6 +14,7 @@ public class UI : MonoBehaviour
     bulletText;
 
 
+
     private void Awake() { if (ui == null) ui = this; }
 
     public void SetActive(GameObject gameObject, bool value) { gameObject.SetActive(value); }

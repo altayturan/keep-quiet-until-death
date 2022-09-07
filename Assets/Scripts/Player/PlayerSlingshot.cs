@@ -7,7 +7,9 @@ public class PlayerSlingshot : MonoBehaviour
     [SerializeField]
     float range = 5f, percentIncrease = 1f, speed = 1f;
     float rangePercent;
-    bool shooting;
+    bool shooting;[SerializeField]
+    float reloadTime = 1f;
+    bool canShoot = true;
     [SerializeField]
     GameObject stone, hitPoint, hitEffect;
     [SerializeField]
@@ -22,7 +24,7 @@ public class PlayerSlingshot : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1) && !GetShooting())
+        if (Input.GetMouseButtonDown(1) && !GetShooting() && canShoot)
             StartShooting();
         if (Input.GetMouseButton(1) && GetShooting())
             HoldShooting();
@@ -56,5 +58,12 @@ public class PlayerSlingshot : MonoBehaviour
         rangePercent = 0;
         Destroy(hitPointer);
         SetShooting(false); GetComponent<PlayerGunshot>().SetCanTwice(true);
+        StartCoroutine(ReloadTime());
+    }
+    IEnumerator ReloadTime()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(reloadTime);
+        canShoot = true;
     }
 }
