@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85e087541ec6a345b5be8fdda08b25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 946b319114e9912428b23262a6857ebe, type: 3}
+  audioClip: {fileID: 8300000, guid: 1cab506b05771c247b57d49313a54678, type: 3}
   range: 5
 --- !u!58 &2488477544417582101
 CircleCollider2D:
@@ -111,12 +111,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13118412, y: 0.04036422}
+  m_Offset: {x: -0.16540615, y: -0.056219157}
   serializedVersion: 2
-  m_Radius: 0.90423506
+  m_Radius: 1.0626636
 --- !u!82 &1086315194207365192
 AudioSource:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.9138284
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

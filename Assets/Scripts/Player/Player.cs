@@ -5,6 +5,13 @@ public class Player : MonoBehaviour
     public float health;
     public int scrapMetal;
     public int bullet;
+
+    public float interval = 5f;
+    public float startTime;
+    private void Start()
+    {
+        startTime = Time.time;
+    }
     [ContextMenu("Save")]
     public void Save()
     {
@@ -16,11 +23,11 @@ public class Player : MonoBehaviour
         Player player = DataSaver.Load(this);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Girdi");
-        string tag = collision.collider.tag;
+        string tag = collision.tag;
         if (tag == "Grass" || tag == "Garbage" || tag == "Lamp" || tag == "Tree")
-            collision.collider.GetComponent<EtkilesimliObje>().PlaySound();
+            collision.GetComponent<EtkilesimliObje>().PlaySound();
     }
 }
