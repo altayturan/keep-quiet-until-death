@@ -115,7 +115,7 @@ TextureImporter:
         width: 328
         height: 165
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -123,6 +123,27 @@ TextureImporter:
       bones: []
       spriteID: d11c2d74c9091024ba53572516586e5b
       internalID: 1162774243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asfalt_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 135
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96030023981596247a5302974536eb0f
+      internalID: 667103835
       vertices: []
       indices: 
       edges: []
@@ -138,6 +159,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      asfalt_1: 667103835
       asfalt_0: -1765221932
   spritePackingTag: 
   pSDRemoveMatte: 0
