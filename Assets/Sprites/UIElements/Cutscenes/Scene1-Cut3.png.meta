@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4307877f7bf76354dbaac92e9557fb23
+guid: 12b408adac5f14040a8ed987e47d6798
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,7 +105,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Scene1-Cut3_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 120
+        width: 778
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b5b75d24816e5469de2e17a1fd345b
+      internalID: -373778664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scene1-Cut3_2
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 689
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb729b812d9f2364db08c666c18e3412
+      internalID: -571805021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +158,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Scene1-Cut3_0: 1635591305
+      Scene1-Cut3_2: -571805021
+      Scene1-Cut3_3: -1890475870
+      Scene1-Cut3_1: -373778664
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
