@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5260452438592875526}
   - component: {fileID: 290221150725519360}
   - component: {fileID: 4968622886534500064}
+  - component: {fileID: 5064260370515098923}
   m_Layer: 0
   m_Name: lamb
   m_TagString: Lamp
@@ -214,6 +215,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5064260370515098923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979429543560813865}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.73996973, y: -1.2147374, z: 0}
+  - {x: -0.89712095, y: -0.69727254, z: 0}
+  - {x: -0.25532293, y: -0.38296962, z: 0}
+  - {x: -0.15055561, y: -1.2409294, z: 0}
+  m_ShapePathHash: -2075681219
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -383288
 --- !u!1 &8175504751643548744
 GameObject:
   m_ObjectHideFlags: 0
