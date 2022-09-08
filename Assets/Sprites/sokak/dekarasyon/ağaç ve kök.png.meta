@@ -111,39 +111,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 930
-        y: 518
+        y: 570
         width: 454
-        height: 902
+        height: 735
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 60, z: 6, w: 132}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f10e9e702122645478a265e64e057e47
-      internalID: 1958767718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "a\u011Fa\xE7 ve k\xF6k_1"
-      rect:
-        serializedVersion: 2
-        x: 436
-        y: 690
-        width: 288
-        height: 323
-      alignment: 0
-      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dd7ed7175148918418c9d183e6d3dedf
-      internalID: 543622391
+      spriteID: 1ec30a88050dac1f0800000000000000
+      internalID: -1023776920965202719
       vertices: []
       indices: 
       edges: []
@@ -151,16 +130,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "a\u011Fa\xE7 ve k\xF6k_1": 543622391
-      "a\u011Fa\xE7 ve k\xF6k_0": 1958767718
+      "a\u011Fa\xE7 ve k\xF6k_0": -1023776920965202719
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
