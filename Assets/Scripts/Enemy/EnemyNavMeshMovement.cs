@@ -9,22 +9,19 @@ public class EnemyNavMeshMovement : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
     [SerializeField]
-    public bool canMove = false;
+    public bool canMove = false, canPlayer = true;
     //gecici kod
-    Transform player;
+    GameObject player;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
-        //gecici kod
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.Find("Player");
     }
     private void Update()
     {
-        //gecici kod
         SetCanMove();   
         agent.SetDestination(target.position);
         
@@ -47,7 +44,7 @@ public class EnemyNavMeshMovement : MonoBehaviour
 
     public void SetCanMove()
     {
-        if(GetTarget() != player.position)
+        if(Vector2.Distance(transform.position,GetTarget()) < 1f)
         {
             canMove = false;
             return;
@@ -55,8 +52,7 @@ public class EnemyNavMeshMovement : MonoBehaviour
         canMove = true;    
     }
 
-    public void SetTargetPos(Vector2 value)
-    {
-        target.position = value;
-    }
+    public void SetTargetPos(Vector2 value) { target.position = value; }
+    public void SetCanPlayer(bool value) { canPlayer = value; }
+    public bool GetCanPlayer() { return canPlayer; }
 }

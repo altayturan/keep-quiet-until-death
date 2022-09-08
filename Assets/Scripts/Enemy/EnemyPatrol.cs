@@ -11,7 +11,9 @@ public class EnemyPatrol : MonoBehaviour
     {
         m_NavMeshMovement = GetComponent<EnemyNavMeshMovement>();
         target = RandomPosGetter(transform.position);
+        PatrolEnumStarter();
     }
+    /*
     void FixedUpdate()
     {
         if (m_NavMeshMovement.canMove)
@@ -21,13 +23,13 @@ public class EnemyPatrol : MonoBehaviour
         }
         if (!IsInvoking("Patrol"))
         {
-            InvokeRepeating("Patrol", 0, 3);
+            InvokeRepeating("Patrol", 0, 4);
         }
     }
+    */
 
     void Patrol()
     {
-        Debug.Log("SLM");
         target = (target == center ? RandomPosGetter(transform.position) : center);
         m_NavMeshMovement.SetTarget(target);
     }
@@ -35,5 +37,13 @@ public class EnemyPatrol : MonoBehaviour
     {
         Vector2 pos = new Vector2(value.x + Random.Range(-2,2),value.y + Random.Range(-2,2));
         return pos;
+    }
+    void PatrolEnumStarter() { StartCoroutine(PatrolEnum()); }
+    IEnumerator PatrolEnum()
+    {
+        yield return new WaitForSeconds(5f);
+        if(m_NavMeshMovement.canMove)
+            Patrol();
+        PatrolEnumStarter();
     }
 }

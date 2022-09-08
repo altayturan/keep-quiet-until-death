@@ -55,6 +55,7 @@ public class PlayerNoise : MonoBehaviour
         RaycastHit2D[] hits = Physics2D.CircleCastAll(this.transform.position, range, Vector2.zero, 1000, enemyLayer);
         foreach (var rycst in hits)
             if(rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>() != null)
-            rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>().SetTargetPos(this.transform.position);
+                if(rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>().GetCanPlayer())
+                    rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>().SetTargetPos(this.transform.position);
     }
 }

@@ -20,18 +20,28 @@ public class EtkilesimliObje : MonoBehaviour
 
     public void PlaySound()
     {
-        audioSource.PlayOneShot(audioSource.clip, 1f);
+        //audioSource.PlayOneShot(audioSource.clip, 1f);
+
+        StartCoroutine(InteractEnum());
     }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-    public void InteractWithEnemies()
+    IEnumerator InteractEnum()
     {
+
         RaycastHit2D[] hits = Physics2D.CircleCastAll(this.transform.position, range, Vector2.zero, 1000, enemyLayer);
         foreach (var rycst in hits)
             if (rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>() != null)
+            {
                 rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>().SetTargetPos(this.transform.position);
+                rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>().SetCanPlayer(false);
+                yield return new WaitForSeconds(3f);
+                rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>().SetCanPlayer(true);
+            }
+
+       
     }
 }

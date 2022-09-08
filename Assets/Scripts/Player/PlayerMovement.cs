@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private int activeSpeed = 0;
     private Transform player;
     [SerializeField] private Transform playerShootPos;
-
     Animator animator;
+    Vector2 activeState;
     private bool rightPressed => Input.GetKey(KeyCode.D);
     private bool leftPressed => Input.GetKey(KeyCode.A);
     private bool upPressed => Input.GetKey(KeyCode.W);
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (sneakPressed)
             SetActiveSpeed(1);
-        else if (runPressed && GetComponent<PlayerStats>().LoseStamina(1))
+        else if (runPressed && activeState.magnitude != 0  && GetComponent<PlayerStats>().LoseStamina(1))
             SetActiveSpeed(2);
         else if (rightPressed || leftPressed || downPressed || upPressed)
             SetActiveSpeed(0);
@@ -43,23 +43,27 @@ public class PlayerMovement : MonoBehaviour
     }
     void Move()
     {
-        Vector2 vector = new Vector2(0, 0);
+        activeState = new Vector2(0, 0);
 
         if (rightPressed)
-            vector += Vector2.right;
+            activeState += Vector2.right;
         if (leftPressed)
-            vector += Vector2.left;
+            activeState += Vector2.left;
         if (upPressed)
-            vector += Vector2.up;
+            activeState += Vector2.up;
         if (downPressed)
-            vector += Vector2.down;
+            activeState += Vector2.down;
 
-        player.Translate(vector * allSpeeds[activeSpeed] * Time.deltaTime, Space.World);
+        player.Translate(activeState * allSpeeds[activeSpeed] * Time.deltaTime, Space.World);
 
-        if (vector.magnitude != 0)
+        if (activeState.magnitude != 0)
             animator.SetBool("isWalking", true);
         else
             animator.SetBool("isWalking", false);
+        if(runPressed)
+            animator.SetBool("isRunning", true);
+        else
+            animator.SetBool("isRunning", false);
     }
     void Rotate()
     {
