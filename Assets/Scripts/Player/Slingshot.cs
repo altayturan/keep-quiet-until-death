@@ -22,6 +22,11 @@ public class Slingshot : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (tag == "Grass" || tag == "Garbage" || tag == "Lamp" || tag == "Tree")
+            collision.GetComponent<EtkilesimliObje>().PlaySound();
+
+
+
         Particle();
         Destroy(gameObject);
     }
