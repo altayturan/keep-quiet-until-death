@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,7 +105,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "yoldaki k\u0131r\u0131k vol2_0"
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1514
+        width: 548
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf853327b57dd940bd8c029df47769e
+      internalID: 1014378901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "yoldaki k\u0131r\u0131k vol2_1"
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 1187
+        width: 414
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a1c88e722e6f343bd4bf6bc53b45da
+      internalID: -1181679432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +158,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "yoldaki k\u0131r\u0131k vol2_0": 1014378901
+      "yoldaki k\u0131r\u0131k vol2_1": 1722030524
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
