@@ -101,6 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 109e45445c252bf4b8e74338332c3237, type: 3}
   range: 0
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!58 &6396618662874253021
 CircleCollider2D:
   m_ObjectHideFlags: 0
