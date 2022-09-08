@@ -127,6 +127,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: "k\xF6\u015Feli asfalt_1"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71347360f7e426a44868cd4f277bf591
+      internalID: -1893277134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -139,6 +160,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       "k\xF6\u015Feli asfalt_0": 1598415018
+      "k\xF6\u015Feli asfalt_1": -1893277134
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
