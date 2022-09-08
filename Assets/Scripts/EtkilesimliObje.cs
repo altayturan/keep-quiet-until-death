@@ -8,6 +8,8 @@ public class EtkilesimliObje : MonoBehaviour
     
     [SerializeField] private AudioClip audioClip;
     [SerializeField] private float range;
+    [SerializeField]
+    private LayerMask enemyLayer;
 
     private AudioSource audioSource;
     void Start()
@@ -25,5 +27,11 @@ public class EtkilesimliObje : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-
+    public void InteractWithEnemies()
+    {
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(this.transform.position, range, Vector2.zero, 1000, enemyLayer);
+        foreach (var rycst in hits)
+            if (rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>() != null)
+                rycst.collider.gameObject.GetComponent<EnemyNavMeshMovement>().SetTargetPos(this.transform.position);
+    }
 }
