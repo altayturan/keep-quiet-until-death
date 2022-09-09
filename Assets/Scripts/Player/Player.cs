@@ -22,7 +22,11 @@ public class Player : MonoBehaviour
     [ContextMenu("Load")]
     public void Load()
     {
-        Player player = DataSaver.Load(this);
+        Player player;
+        if (PlayerPrefs.GetString("MapName") == SceneManager.GetActiveScene().name)
+            player = DataSaver.Load2(this);
+        else
+            player = DataSaver.Load2(this);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
