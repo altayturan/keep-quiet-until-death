@@ -192,7 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85e087541ec6a345b5be8fdda08b25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 109e45445c252bf4b8e74338332c3237, type: 3}
+  audioClip:
+  - {fileID: 8300000, guid: 109e45445c252bf4b8e74338332c3237, type: 3}
   range: 10
   enemyLayer:
     serializedVersion: 2

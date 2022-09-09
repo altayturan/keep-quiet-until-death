@@ -30,8 +30,11 @@ public class Slingshot : MonoBehaviour
             collision.gameObject.GetComponent<EtkilesimliObje>().PlaySound();
             collision.gameObject.GetComponent<EtkilesimliObje>().shadow.SetActive(true);
             collision.gameObject.GetComponent<EtkilesimliObje>().lightSource.SetActive(false);
-
         }
+        if(collision.gameObject.tag == "Car")
+            collision.gameObject.GetComponent<EtkilesimliObje>().PlaySound();
+        if(collision.gameObject.tag == "Tree")
+            collision.gameObject.GetComponent<EtkilesimliObje>().PlaySound();
 
 
         Particle();

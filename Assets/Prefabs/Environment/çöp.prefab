@@ -100,11 +100,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85e087541ec6a345b5be8fdda08b25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 1cab506b05771c247b57d49313a54678, type: 3}
+  audioClip:
+  - {fileID: 8300000, guid: 674ebf65d6c9eaa4eaf32f229fa88a65, type: 3}
   range: 5
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  shadow: {fileID: 0}
+  lightSource: {fileID: 0}
 --- !u!58 &2488477544417582101
 CircleCollider2D:
   m_ObjectHideFlags: 0

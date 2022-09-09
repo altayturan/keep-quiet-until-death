@@ -6,23 +6,27 @@ using UnityEngine.UI;
 public class EtkilesimliObje : MonoBehaviour
 {
     
-    [SerializeField] private AudioClip audioClip;
+    [SerializeField] private AudioClip[] audioClip;
     [SerializeField] private float range;
     [SerializeField]
     private LayerMask enemyLayer;
-
     public GameObject shadow, lightSource;
 
     private AudioSource audioSource;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = audioClip;
+        if(audioClip.Length > 1)
+            audioSource.clip = audioClip[Random.Range(0, audioClip.Length)];
+        else
+            audioSource.clip = audioClip[0];
+
     }
 
     public void PlaySound()
     {
-        audioSource.PlayOneShot(audioSource.clip, 1f);
+        Debug.Log("Çalýþtý");
+        audioSource.PlayOneShot(audioSource.clip,1f);
 
         StartCoroutine(InteractEnum());
     }
