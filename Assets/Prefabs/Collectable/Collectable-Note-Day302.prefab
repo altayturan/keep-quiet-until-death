@@ -19437,7 +19437,7 @@ GameObject:
   - component: {fileID: 4656278310008163278}
   - component: {fileID: 5669745770864217226}
   m_Layer: 0
-  m_Name: Collectable-Day302
+  m_Name: Collectable-Note-Day302
   m_TagString: Interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
