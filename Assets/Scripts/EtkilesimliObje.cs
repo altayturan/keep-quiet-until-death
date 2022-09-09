@@ -22,7 +22,7 @@ public class EtkilesimliObje : MonoBehaviour
 
     public void PlaySound()
     {
-        //audioSource.PlayOneShot(audioSource.clip, 1f);
+        audioSource.PlayOneShot(audioSource.clip, 1f);
 
         StartCoroutine(InteractEnum());
     }
