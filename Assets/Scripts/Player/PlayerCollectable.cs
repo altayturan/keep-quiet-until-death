@@ -20,7 +20,7 @@ public class PlayerCollectable : MonoBehaviour
                 else if (collision.gameObject.name.Split('-')[1] == "Scrap")
                     UI.ui.InstantiateUIObject(collision.gameObject.GetComponent<CollectableNotes>().GetNote());
                 else if (collision.gameObject.name.Split('-')[1] == "Health")
-                    GetComponent<PlayerStats>().GainHealth(20);
+                    GetComponent<Player>().GainHealth(20);
                 else if (collision.gameObject.name.Split('-')[1] == "Bullet")
                     UI.ui.InstantiateUIObject(collision.gameObject.GetComponent<CollectableNotes>().GetNote());
                 UI.ui.SetActive(UI.ui.interactButton, false);

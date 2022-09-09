@@ -267,7 +267,6 @@ GameObject:
   - component: {fileID: 1687284380885474210}
   - component: {fileID: 6773736606778152914}
   - component: {fileID: 6773736606778152917}
-  - component: {fileID: 4470099082535696444}
   - component: {fileID: 7244447444819280675}
   - component: {fileID: 8275192629081305623}
   - component: {fileID: 7446115954646526944}
@@ -420,20 +419,6 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &4470099082535696444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6773736606778152912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0346d14bde2b5f41a3b28d487d3c415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  maxStamina: 25
 --- !u!114 &7244447444819280675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,10 +444,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  scrapMetal: 100
-  bullet: 100
-  interval: 5
-  startTime: 0
+  scrapMetal: 1
+  bullet: 2
+  maxHealth: 100
+  maxStamina: 100
 --- !u!95 &7446115954646526944
 Animator:
   serializedVersion: 4

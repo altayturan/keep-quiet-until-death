@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (sneakPressed)
             SetActiveSpeed(1);
-        else if (runPressed && activeState.magnitude != 0  && GetComponent<PlayerStats>().LoseStamina(1))
+        else if (runPressed && activeState.magnitude != 0  && GetComponent<Player>().LoseStamina(1))
             SetActiveSpeed(2);
         else if (rightPressed || leftPressed || downPressed || upPressed)
             SetActiveSpeed(0);
