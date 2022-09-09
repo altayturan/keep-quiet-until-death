@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCollectable : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class PlayerCollectable : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (collision.gameObject.name.Split('_')[0] == "Scene")
+                SceneManager.LoadScene(collision.gameObject.name);
+            if (collision.gameObject.name.Split('-')[0] == "Scene")
+                SceneManager.LoadScene(collision.gameObject.name);
             if (collision.gameObject.name.Split('-')[0] == "Collectable")
             {
                 if (collision.gameObject.name.Split('-')[1] == "Note")
