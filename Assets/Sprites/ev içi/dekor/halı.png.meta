@@ -105,7 +105,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "hal\u0131_1"
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 902
+        width: 355
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 10, y: 12, z: 0, w: 25}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c72793e83920634ab137093eff31d8f
+      internalID: 1338877642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +137,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "hal\u0131_8": -327255433
+      "hal\u0131_12": 511916775
+      "hal\u0131_16": 1846004836
+      "hal\u0131_4": 1949147841
+      "hal\u0131_13": 180982968
+      "hal\u0131_17": 2102308185
+      "hal\u0131_7": -1192406703
+      "hal\u0131_0": 1967565111
+      "hal\u0131_5": 106822850
+      "hal\u0131_15": -585877007
+      "hal\u0131_9": 1378155476
+      "hal\u0131_2": 2136544460
+      "hal\u0131_14": 391101700
+      "hal\u0131_10": 293963565
+      "hal\u0131_1": 1338877642
+      "hal\u0131_11": -458925796
+      "hal\u0131_6": -1788703974
+      "hal\u0131_3": -974375310
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
