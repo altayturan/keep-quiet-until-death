@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
     {
         SetHealth(GetHealth() - value);
         if (GetHealth() < 0)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(sceneName);
         UI.ui.SetSlider(UI.ui.healthBar, maxHealth, health);
     }
     public void GainStamina(float value)

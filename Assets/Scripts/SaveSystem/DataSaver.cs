@@ -23,4 +23,11 @@ public static class DataSaver
         player.sceneName = PlayerPrefs.GetString("MapName");
         return player;
     }
-}
+    public static Player Load2(Player player)
+    {
+        player.health = PlayerPrefs.GetFloat("Health");
+        player.scrapMetal = PlayerPrefs.GetInt("ScrapMetal");
+        player.bullet = PlayerPrefs.GetInt("Bullet");
+        player.sceneName = PlayerPrefs.GetString("MapName");
+        return player;
+    }
