@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 100
   m_Sprite: {fileID: -1783335014, guid: 94de8d547d6844c42acce9c58e9afbb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -119,6 +119,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 109e45445c252bf4b8e74338332c3237, type: 3}
   range: 0
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!82 &4968622886534500064
 AudioSource:
   m_ObjectHideFlags: 0
