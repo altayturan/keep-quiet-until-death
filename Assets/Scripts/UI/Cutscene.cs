@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Cutscene : MonoBehaviour
 {
+    public bool value;
     Animator animator;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        if(value)
     }
     private void Update()
     {
