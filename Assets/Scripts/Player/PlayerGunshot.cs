@@ -39,4 +39,5 @@ public class PlayerGunshot : MonoBehaviour
         yield return new WaitForSeconds(reloadTime);
         canShoot = true;
     }
+    public void SetCanShoot(bool value) { canShoot = value; }
 }

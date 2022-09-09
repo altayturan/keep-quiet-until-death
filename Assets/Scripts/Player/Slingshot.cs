@@ -25,6 +25,13 @@ public class Slingshot : MonoBehaviour
         if (collision.gameObject.tag == "Garbage")
             collision.gameObject.GetComponent<EtkilesimliObje>().PlaySound();
 
+        if (collision.gameObject.tag == "Lamp")
+        {
+            collision.gameObject.GetComponent<EtkilesimliObje>().PlaySound();
+            collision.gameObject.GetComponent<EtkilesimliObje>().shadow.SetActive(true);
+            collision.gameObject.GetComponent<EtkilesimliObje>().lightSource.SetActive(false);
+
+        }
 
 
         Particle();

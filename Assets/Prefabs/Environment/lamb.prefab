@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2193304309403623941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6464040324994613089}
+  - component: {fileID: 5092435331592083124}
+  m_Layer: 0
+  m_Name: Shadow 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6464040324994613089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193304309403623941}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6979429543560813863}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5092435331592083124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193304309403623941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.43667412, y: -1.2055454, z: 0}
+  - {x: -0.7260704, y: -1.1488457, z: 0}
+  - {x: -0.8547411, y: -0.8179779, z: 0}
+  - {x: -0.64335346, y: -0.6341629, z: 0}
+  - {x: -0.55144596, y: -0.42277527, z: 0}
+  - {x: -0.6984978, y: -0.21138763, z: 0}
+  - {x: -0.7076893, y: 0.1746254, z: 0}
+  - {x: -0.86035824, y: 0.4240017, z: 0}
+  - {x: -0.58820915, y: 0.7352619, z: 0}
+  - {x: -0.4411564, y: 1.1764183, z: 0}
+  - {x: 0.14705181, y: 1.222372, z: 0}
+  - {x: 0.5994177, y: 1.4092312, z: 0}
+  - {x: 1.1856079, y: 0.41358376, z: 0}
+  - {x: 0.9282665, y: -0.036762238, z: 0}
+  - {x: 0.82716846, y: -0.36763, z: 0}
+  - {x: 0.5054922, y: -0.38601303, z: 0}
+  - {x: 0.18950272, y: -0.6527195, z: 0}
+  - {x: -0.05514431, y: -0.6984978, z: 0}
+  - {x: -0.29410458, y: -0.9098854, z: 0}
+  - {x: -0.23896027, y: -1.0017929, z: 0}
+  m_ShapePathHash: -583863547
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 286872
 --- !u!1 &6979429543560813865
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +88,6 @@ GameObject:
   - component: {fileID: 5260452438592875526}
   - component: {fileID: 290221150725519360}
   - component: {fileID: 4968622886534500064}
-  - component: {fileID: 5064260370515098923}
   m_Layer: 0
   m_Name: lamb
   m_TagString: Lamp
@@ -34,8 +108,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2802618732066275706}
+  - {fileID: 6464040324994613089}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6979429543560813862
 SpriteRenderer:
@@ -118,10 +193,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 109e45445c252bf4b8e74338332c3237, type: 3}
-  range: 0
+  range: 10
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  shadow: {fileID: 2193304309403623941}
+  lightSource: {fileID: 8175504751643548744}
 --- !u!82 &4968622886534500064
 AudioSource:
   m_ObjectHideFlags: 0
@@ -218,33 +295,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5064260370515098923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6979429543560813865}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -0.73996973, y: -1.2147374, z: 0}
-  - {x: -0.89712095, y: -0.69727254, z: 0}
-  - {x: -0.25532293, y: -0.38296962, z: 0}
-  - {x: -0.15055561, y: -1.2409294, z: 0}
-  m_ShapePathHash: -2075681219
-  m_Mesh: {fileID: 0}
-  m_InstanceId: -383288
 --- !u!1 &8175504751643548744
 GameObject:
   m_ObjectHideFlags: 0

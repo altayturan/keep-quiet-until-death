@@ -23,4 +23,6 @@ public class Cutscene : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    public void PlayerCanShoot() { GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGunshot>().SetCanShoot(true); }
+    public void PlayerCantShoot() { GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerGunshot>().SetCanShoot(false); }
 }

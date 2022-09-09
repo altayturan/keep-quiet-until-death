@@ -11,6 +11,8 @@ public class EtkilesimliObje : MonoBehaviour
     [SerializeField]
     private LayerMask enemyLayer;
 
+    public GameObject shadow, lightSource;
+
     private AudioSource audioSource;
     void Start()
     {
