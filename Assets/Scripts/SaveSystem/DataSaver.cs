@@ -31,3 +31,4 @@ public static class DataSaver
         player.sceneName = PlayerPrefs.GetString("MapName");
         return player;
     }
+}
