@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -52,6 +53,13 @@ public class Player : MonoBehaviour
         else if (GetHealth() < 0) Debug.Log("ah!");
         UI.ui.SetSlider(UI.ui.healthBar, maxHealth, health);
     }
+    public void LoseHealth(float value)
+    {
+        SetHealth(GetHealth() - value);
+        if (GetHealth() < 0)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        UI.ui.SetSlider(UI.ui.healthBar, maxHealth, health);
+    }
     public void GainStamina(float value)
     {
         SetStamina(stamina + value);
@@ -76,6 +84,7 @@ public class Player : MonoBehaviour
         if (bullet - value >= 0)
         {
             bullet -= value;
+            UI.ui.SetText(UI.ui.bulletText, bullet.ToString());
             return true;
         }
         return false;

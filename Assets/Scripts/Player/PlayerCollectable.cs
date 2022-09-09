@@ -18,11 +18,11 @@ public class PlayerCollectable : MonoBehaviour
                 if (collision.gameObject.name.Split('-')[1] == "Note")
                     UI.ui.InstantiateUIObject(collision.gameObject.GetComponent<CollectableNotes>().GetNote());
                 else if (collision.gameObject.name.Split('-')[1] == "Scrap")
-                    UI.ui.InstantiateUIObject(collision.gameObject.GetComponent<CollectableNotes>().GetNote());
+                    GetComponent<Player>().GainScrap(3 * Random.Range(1,3));
                 else if (collision.gameObject.name.Split('-')[1] == "Health")
                     GetComponent<Player>().GainHealth(20);
                 else if (collision.gameObject.name.Split('-')[1] == "Bullet")
-                    UI.ui.InstantiateUIObject(collision.gameObject.GetComponent<CollectableNotes>().GetNote());
+                    GetComponent<Player>().GainBullet(1);
                 UI.ui.SetActive(UI.ui.interactButton, false);
                 Destroy(collision.gameObject);
             }

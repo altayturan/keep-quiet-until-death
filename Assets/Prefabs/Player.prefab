@@ -446,6 +446,7 @@ MonoBehaviour:
   health: 100
   scrapMetal: 1
   bullet: 2
+  maxBullet: 2
   maxHealth: 100
   maxStamina: 100
 --- !u!95 &7446115954646526944

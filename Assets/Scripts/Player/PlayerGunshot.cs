@@ -26,9 +26,12 @@ public class PlayerGunshot : MonoBehaviour
     }
     void Shoot()
     {
-        GameObject throws = Instantiate(bullet, playerMovement.GetPlayerShootPos().position, Quaternion.identity);
-        throws.GetComponent<Gunshot>().SetVariables(speed, hitEffect, this.gameObject);
-        StartCoroutine(ReloadTime());
+        if(GetComponent<Player>().LoseBullet(1))
+        {
+            GameObject throws = Instantiate(bullet, playerMovement.GetPlayerShootPos().position, Quaternion.identity);
+            throws.GetComponent<Gunshot>().SetVariables(speed, hitEffect, this.gameObject);
+            StartCoroutine(ReloadTime());
+        }
     }
     IEnumerator ReloadTime()
     {
