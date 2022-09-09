@@ -333,7 +333,7 @@ MonoBehaviour:
   range: 7
   percentIncrease: 75
   speed: 15
-  reloadTime: 1
+  reloadTime: 0.5
   stone: {fileID: 6299025918728034202, guid: 4902551902df8624c81a80c82e272f51, type: 3}
   hitPoint: {fileID: 2380491698484808914, guid: f470c2e637d42db4296ac3434c60c54a, type: 3}
   hitEffect: {fileID: 2835505766642106059, guid: 55fe8884b0e29ec4aaf277fabc5c46a0, type: 3}
