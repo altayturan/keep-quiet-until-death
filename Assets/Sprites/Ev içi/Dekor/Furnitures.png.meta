@@ -262,7 +262,7 @@ TextureImporter:
         width: 150
         height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,6 +270,27 @@ TextureImporter:
       bones: []
       spriteID: 006d4f818915bde4596ad410399b3367
       internalID: 268178522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furnitures_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1068
+        width: 88
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566f110d48f0ed04893bd22ec54c0be7
+      internalID: -1079385223
       vertices: []
       indices: 
       edges: []
@@ -291,6 +312,7 @@ TextureImporter:
       Furnitures_4: 89188937
       Furnitures_7: 268178522
       Furnitures_6: -2005388887
+      Furnitures_8: -1079385223
       Furnitures_5: 51409932
       Furnitures_3: -1859078696
   spritePackingTag: 
