@@ -20,13 +20,13 @@ public class PlayerCollectable : MonoBehaviour
                 SceneManager.LoadScene(collision.gameObject.name);
             if (collision.gameObject.name.Split('-')[0] == "Collectable")
             {
-                if (collision.gameObject.name.Split('-')[1] == "Note")
+                if (collision.gameObject.name.Split('-')[1].Contains("Note"))
                     UI.ui.InstantiateUIObject(collision.gameObject.GetComponent<CollectableNotes>().GetNote());
-                else if (collision.gameObject.name.Split('-')[1] == "Scrap")
+                else if (collision.gameObject.name.Split('-')[1].Contains("Scrap"))
                     GetComponent<Player>().GainScrap(3 * Random.Range(1,3));
-                else if (collision.gameObject.name.Split('-')[1] == "Health")
+                else if (collision.gameObject.name.Split('-')[1].Contains("Health"))
                     GetComponent<Player>().GainHealth(20);
-                else if (collision.gameObject.name.Split('-')[1] == "Bullet")
+                else if (collision.gameObject.name.Split('-')[1].Contains("Bullet"))
                     GetComponent<Player>().GainBullet(1);
                 UI.ui.SetActive(UI.ui.interactButton, false);
                 Destroy(collision.gameObject);

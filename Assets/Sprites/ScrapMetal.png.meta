@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ae65ff94f45ad814785686b6ea869178
+guid: d209aa30081428f46916269ec26585b2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,49 +105,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Stairs_0
-      rect:
-        serializedVersion: 2
-        x: 1921
-        y: 1441
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea421d60a245c43418d03f6ebdb96e7d
-      internalID: -1452215630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stairs_1
-      rect:
-        serializedVersion: 2
-        x: 1479
-        y: 633
-        width: 494
-        height: 808
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 711dc21ce84a62f449788949ed934f83
-      internalID: 1386939439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,10 +116,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Stairs_2: 85450458
-      Stairs_1: 1386939439
-      Stairs_0: -1452215630
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
