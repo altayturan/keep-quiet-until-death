@@ -6,12 +6,15 @@ public class Player : MonoBehaviour
     public float health;
     public int scrapMetal;
     public int bullet, maxBullet;
-    
+    public string sceneName;
+    public int cutscene;
 
     [SerializeField] float maxHealth, maxStamina;
     float stamina;
     PlayerMovement playerMovement;
     [ContextMenu("Save")]
+
+    
     public void Save()
     {
         DataSaver.Save(this);
@@ -33,7 +36,9 @@ public class Player : MonoBehaviour
         GainStamina(maxStamina);
         GainBullet(0);
         GainScrap(0);
-        playerMovement = GetComponent<PlayerMovement>(); 
+        playerMovement = GetComponent<PlayerMovement>();
+
+        Load();
 
     }
     public float GetHealth() { return health; }
