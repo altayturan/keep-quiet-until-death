@@ -16,8 +16,11 @@ public class PlayerCollectable : MonoBehaviour
         {
             if (collision.gameObject.name.Contains("Scene"))
             {
-                GetComponent<Player>().sceneName = SceneManager.GetActiveScene().name;
-                GetComponent<Player>().Save();
+                if (collision.gameObject.name.Contains("-"))
+                {
+                    GetComponent<Player>().sceneName = SceneManager.GetActiveScene().name;
+                    GetComponent<Player>().Save();
+                }
                 SceneManager.LoadScene(collision.gameObject.name);
             }
             if (collision.gameObject.name.Split('-')[0] == "Collectable")

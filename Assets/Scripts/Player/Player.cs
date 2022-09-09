@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     {
         Player player;
         if (PlayerPrefs.GetString("MapName") == SceneManager.GetActiveScene().name)
-            player = DataSaver.Load2(this);
+            player = DataSaver.Load(this);
         else
             player = DataSaver.Load2(this);
     }
@@ -36,13 +36,16 @@ public class Player : MonoBehaviour
     }
     private void Start() 
     {
+        Load();
+
+
         GainHealth(0);
         GainStamina(maxStamina);
         GainBullet(0);
         GainScrap(0);
         playerMovement = GetComponent<PlayerMovement>();
 
-        Load();
+       
 
     }
     public float GetHealth() { return health; }
