@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     public float health;
     public int scrapMetal;
     public int bullet, maxBullet;
+    
 
     [SerializeField] float maxHealth, maxStamina;
     float stamina;

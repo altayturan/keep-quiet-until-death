@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class DataSaver
 {
@@ -9,6 +10,7 @@ public static class DataSaver
         PlayerPrefs.SetInt("Bullet", player.bullet);
         PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
         PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
+        PlayerPrefs.SetString("MapName", SceneManager.GetActiveScene().name;
     }
 
     public static Player Load(Player player)
@@ -17,6 +19,7 @@ public static class DataSaver
         player.scrapMetal = PlayerPrefs.GetInt("ScrapMetal");
         player.bullet = PlayerPrefs.GetInt("Bullet");
         player.transform.position = new Vector2(PlayerPrefs.GetFloat("PlayerX"), PlayerPrefs.GetFloat("PlayerY"));
+
         return player;
     }
 }
