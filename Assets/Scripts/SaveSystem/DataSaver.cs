@@ -16,19 +16,19 @@ public static class DataSaver
 
     public static Player Load(Player player)
     {
-        player.health = PlayerPrefs.GetFloat("Health");
+        player.health = PlayerPrefs.GetFloat("Health",250);
         player.scrapMetal = PlayerPrefs.GetInt("ScrapMetal");
-        player.bullet = PlayerPrefs.GetInt("Bullet");
+        player.bullet = PlayerPrefs.GetInt("Bullet",2);
         player.transform.position = new Vector2(PlayerPrefs.GetFloat("PlayerX"), PlayerPrefs.GetFloat("PlayerY"));
         player.sceneName = PlayerPrefs.GetString("MapName");
         return player;
     }
     public static Player Load2(Player player)
     {
-        player.health = PlayerPrefs.GetFloat("Health");
+        player.health = PlayerPrefs.GetFloat("Health",2550);
         player.scrapMetal = PlayerPrefs.GetInt("ScrapMetal");
-        player.bullet = PlayerPrefs.GetInt("Bullet");
+        player.bullet = PlayerPrefs.GetInt("Bullet",2);
         player.sceneName = PlayerPrefs.GetString("MapName");
         return player;
     }
-}
+}     
