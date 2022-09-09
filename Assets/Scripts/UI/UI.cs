@@ -16,7 +16,7 @@ public class UI : MonoBehaviour
 
 
 
-    private void Awake() { if (ui == null) ui = this; }
+    private void Awake() { if (ui == null) ui = this; else Destroy(gameObject); }
 
     public void SetActive(GameObject gameObject, bool value) { gameObject.SetActive(value); }
     public void SetText(GameObject gameObject, string value) { gameObject.GetComponent<TextMeshProUGUI>().text = value; }

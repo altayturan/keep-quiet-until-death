@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Gunshot : MonoBehaviour
 {
-     float speed;
-    GameObject hitEffect, player, deathEffect;
+    float speed;
+    GameObject hitEffect, player;
+    public GameObject deathEffect;
     void Start()
     {
         GetComponent<Rigidbody2D>().velocity = (player.transform.up).normalized * speed;
@@ -22,7 +23,7 @@ public class Gunshot : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            Destroy(Instantiate(deathEffect, collision.transform.position, Quaternion.identity));
+            Destroy(Instantiate(deathEffect, collision.transform.position, Quaternion.identity),3F);
             Destroy(collision.gameObject);
         }
         Particle();
