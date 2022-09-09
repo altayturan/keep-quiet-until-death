@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
     public void LoseHealth(float value)
     {
         SetHealth(GetHealth() - value);
-        if (GetHealth() < 0)
+        if (GetHealth() < 0 && sceneName != null)
             SceneManager.LoadScene(sceneName);
         UI.ui.SetSlider(UI.ui.healthBar, maxHealth, health);
     }

@@ -74,7 +74,7 @@ MonoBehaviour:
   - {x: -0.23896027, y: -1.0017929, z: 0}
   m_ShapePathHash: -583863547
   m_Mesh: {fileID: 0}
-  m_InstanceId: 286872
+  m_InstanceId: 576846
 --- !u!1 &6979429543560813865
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,9 +177,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5334938, y: -0.9257685}
+  m_Offset: {x: -0.04, y: 0.1}
   serializedVersion: 2
-  m_Radius: 0.28442296
+  m_Radius: 1.23
 --- !u!114 &290221150725519360
 MonoBehaviour:
   m_ObjectHideFlags: 0
