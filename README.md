@@ -3,9 +3,10 @@
 
 <p align="center">
    <img src="https://yasargencer.github.io/img/KQUDCover.jpg" alt="[COVER IMAGE]"/>
+   
+This game made in Digiage 2022 Game Development Summer Camp.
 </p>
 
-This game made in Digiage 2022 Game Development Summer Camp.
 
 <h1 align="center">Game Summary</h1>
  
