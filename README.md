@@ -30,7 +30,7 @@ Game takes place at a alternative earth that is currently at post-apocalyptic er
 - [KAYRA KOCAELİ](https://github.com/kayrakocaeli "KAYRA KOCAELİ") as Level Designer
 - Fatma Erdem as Lead Game Artist
 - Oğuz as Game Artist
-- Yasemin as Game Artist
+- Yasemin Kaş as Game Artist
 - [KAAN SAK](https://github.com/kaansak "KAAN SAK") as Jr. Unity Developer and Sound Effects
 - Fatma Avşar as Vocal Artist
 - Melih Dinçer as Jr. Unity Developer
