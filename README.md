@@ -3,11 +3,11 @@
 
 <p align="center">
    <img src="https://yasargencer.github.io/img/KQUDCover.jpg" alt="[COVER IMAGE]"/>
-   
-This game made in Digiage 2022 Game Development Summer Camp.
 </p>
 
-
+<p align ="center">
+    This game made in Digiage 2022 Game Development Summer Camp.
+</p>
 <h1 align="center">Game Summary</h1>
  
  Keep Quiet Until Death is a sound based survival game. 
