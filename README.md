@@ -13,7 +13,7 @@ This game made in Digiage 2022 Game Development Summer Camp.
 
 Sound Mechanic:
 
-There is creatures named "DFN". DFN's can't see but they can hear and they are after your flesh. You must use your sling to keep them distracted and away from you. You also have a gun but not much ammo. Be carefull though, even tho you kill a DFN with one shot many others will hear your gun shot. 
+There is creatures named "Iron Claw". Iron Claw's can't see but they can hear and they are after your flesh. You must use your sling to keep them distracted and away from you. You also have a gun but not much ammo. Be carefull though, even tho you kill a Iron Claw with one shot many others will hear your gun shot. 
 
 Loot Mechanic: 
 
