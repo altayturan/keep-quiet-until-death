@@ -2,7 +2,7 @@
 
 
 <p align="center">
-   <img src="https://yasargencer.github.io/img/KQUDCover.jpg" alt="[COVER IMAGE]"/>
+   <img src="https://yasargencer.github.io/img/KQUDCover.png" alt="[COVER IMAGE]"/>
 </p>
 
 <p align ="center">
