@@ -12,6 +12,7 @@
 <h1 align="center">Game Links</h1>
 
 [GAME WEBSITE](https://yasargencer.github.io/KeepQuietUntilDeath.html "Game Website")
+[TRAILER](https://youtu.be/NA33QaNcAo0 "Trailer")
 
 
 <h1 align="center">Game Summary</h1>
