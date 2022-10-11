@@ -13,7 +13,7 @@
 
 [GAME WEBSITE](https://yasargencer.github.io/KeepQuietUntilDeath.html "Game Website")<br>
 [TRAILER](https://youtu.be/NA33QaNcAo0 "Trailer")
-<iframe width="901" height="507" src="https://www.youtube.com/embed/NA33QaNcAo0" title="Keep Quiet Until Death" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 <h1 align="center">Game Summary</h1>
